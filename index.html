@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keshav Vishak Nair - Professional Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Setting up the 'Inter' font and smooth scrolling */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; /* slate-300 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; /* slate-400 */
+        }
+    </style>
+    <!-- Tailwind Configuration for custom color palette (optional but good practice) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#4f46e5', // Indigo-600
+                        'secondary': '#10b981', // Emerald-500
+                        'dark-bg': '#0f172a', // Slate-900
+                        'light-text': '#f1f5f9', // Slate-100
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-light-text text-dark-bg transition-colors duration-500">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg backdrop-blur-sm bg-opacity-95">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Name -->
+                <a href="#" class="text-2xl font-bold text-primary hover:text-secondary transition duration-300">
+                    Keshav Vishak Nair
+                </a>
+                <!-- Navigation Links -->
+                <nav class="flex space-x-6">
+                    <a href="#about" class="text-gray-700 hover:text-primary font-medium transition duration-300">About</a>
+                    <a href="#skills" class="text-gray-700 hover:text-primary font-medium transition duration-300">Skills</a>
+                    <a href="#projects" class="text-gray-700 hover:text-primary font-medium transition duration-300">Projects</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary font-medium transition duration-300">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="py-20 md:py-36 bg-dark-bg text-light-text">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="relative inline-block p-2 rounded-full border-4 border-secondary mb-8">
+                <!-- Placeholder for Profile Image -->
+                <img src="https://placehold.co/128x128/4f46e5/ffffff?text=KVN"
+                     alt="Profile Picture"
+                     class="w-32 h-32 rounded-full object-cover shadow-xl"
+                     onerror="this.onerror=null;this.src='https://placehold.co/128x128/4f46e5/ffffff?text=Photo';"
+                >
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
+                Hi, I'm <span class="text-secondary">Keshav Vishak Nair</span>.
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
+                I'm a Full-Stack Developer specializing in modern web applications and scalable cloud solutions.
+            </p>
+            <a href="#projects" class="inline-block px-8 py-3 text-lg font-semibold bg-primary text-white rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-105">
+                View My Work &rarr;
+            </a>
+            <a href="#contact" class="inline-block ml-4 px-8 py-3 text-lg font-semibold bg-transparent border-2 border-secondary text-secondary rounded-lg hover:bg-secondary hover:text-dark-bg transition duration-300 transform hover:scale-105">
+                Get in Touch
+            </a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 border-b-4 border-primary inline-block pb-1">
+                About Me
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <!-- UPDATED CASUAL TEXT START -->
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        I'm Keshav, and I absolutely love building cool projects! I've been diving into programming, focusing mainly on web development using tools like JavaScript and React. I also enjoy tinkering with hardware, which is how my Air Quality Monitor project using the ESP32 came about. I love turning a simple idea into a real, working application or device.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        I'm always learning new things and focused on writing clean, efficient code. When I need a break from the screen, I usually head out for a hike or spend some time experimenting with different ways to brew coffee. Take a look at my work—I'm excited to connect and build something awesome!
+                    </p>
+                    <!-- UPDATED CASUAL TEXT END -->
+                </div>
+                <!-- Placeholder for a simple illustration or a second photo -->
+                <div class="hidden md:block bg-gray-200 p-8 rounded-xl shadow-inner text-center">
+                    <p class="text-xl font-semibold text-gray-600">
+                        "The best way to predict the future is to create it."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section (Updated with Tooltip descriptions) -->
+    <section id="skills" class="py-16 md:py-24 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 border-b-4 border-secondary inline-block pb-1">
+                Technical Skills
+            </h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                
+                <!-- Skill Badge 1: 500000 IQ (Uses Modal) -->
+                <span class="text-xl font-extrabold bg-yellow-400 text-dark-bg shadow-2xl cursor-pointer inline-block py-2 px-4 uppercase rounded-full transition duration-300 transform hover:scale-105" onclick="showIQModal()">
+                    500000 IQ 🧠
+                </span>
+                
+                <!-- NEW SKILL: 5000000+ Aura Skill (Now a Modal) -->
+                <span class="text-xl font-extrabold inline-block py-2 px-4 uppercase rounded-full shadow-md transition duration-300 transform hover:scale-105 bg-purple-600 text-white cursor-pointer" onclick="showAuraModal()">
+                    5000000+ aura skill ✨
+                </span>
+
+                <!-- Skill Badge 2: AI Development (Uses Tooltip) -->
+                <div class="group relative flex justify-center">
+                    <span class="text-sm font-semibold inline-block py-2 px-4 uppercase rounded-full shadow-md transition duration-300 transform hover:scale-105 bg-indigo-600 text-white">
+                        AI Development
+                    </span>
+                    <div class="absolute bottom-full mb-2 hidden group-hover:block w-64 rounded-lg bg-gray-800 p-3 text-sm text-white shadow-lg z-10 text-center">
+                        Architecting intelligent lifeforms out of code! I craft epic neural networks that learn the secrets of the universe to power the next generation of smart tech.
+                    </div>
+                </div>
+
+                <!-- Skill Badge 3: GitHub (Uses Tooltip) -->
+                <div class="group relative flex justify-center">
+                    <span class="text-sm font-semibold inline-block py-2 px-4 uppercase rounded-full shadow-md transition duration-300 transform hover:scale-105 bg-gray-800 text-white">
+                        GitHub
+                    </span>
+                    <div class="absolute bottom-full mb-2 hidden group-hover:block w-64 rounded-lg bg-gray-800 p-3 text-sm text-white shadow-lg z-10 text-center">
+                        My command center for time travel (version control) and code collaboration! Every commit is a checkpoint, ensuring no line of genius code is ever lost.
+                    </div>
+                </div>
+
+                <!-- Skill Badge 4: Visual Studio Code (Uses Tooltip) -->
+                <div class="group relative flex justify-center">
+                    <span class="text-sm font-semibold inline-block py-2 px-4 uppercase rounded-full shadow-md transition duration-300 transform hover:scale-105 bg-sky-500 text-white">
+                        Visual Studio Code
+                    </span>
+                    <div class="absolute bottom-full mb-2 hidden group-hover:block w-64 rounded-lg bg-gray-800 p-3 text-sm text-white shadow-lg z-10 text-center">
+                        The ultimate code battle-station! Turbocharged with extensions, it's where I deploy code lightning fast and debug issues before they even happen.
+                    </div>
+                </div>
+
+                <!-- Skill Badge 5: Node.js (Uses Tooltip) -->
+                <div class="group relative flex justify-center">
+                    <span class="text-sm font-semibold inline-block py-2 px-4 uppercase rounded-full shadow-md transition duration-300 transform hover:scale-105 bg-green-600 text-white">
+                        Node.js
+                    </span>
+                    <div class="absolute bottom-full mb-2 hidden group-hover:block w-64 rounded-lg bg-gray-800 p-3 text-sm text-white shadow-lg z-10 text-center">
+                        Unleashing JavaScript's superpower outside the browser! I use it to forge lightning-fast servers and APIs that handle massive data flows like a boss.
+                    </div>
+                </div>
+
+                <!-- Skill Badge 6: ESP32 (IoT) (Uses Tooltip) -->
+                <div class="group relative flex justify-center">
+                    <span class="text-sm font-semibold inline-block py-2 px-4 uppercase rounded-full shadow-md transition duration-300 transform hover:scale-105 bg-red-600 text-white">
+                        ESP32 (IoT)
+                    </span>
+                    <div class="absolute bottom-full mb-2 hidden group-hover:block w-64 rounded-lg bg-gray-800 p-3 text-sm text-white shadow-lg z-10 text-center">
+                        Breathing digital life into the physical world! I use tiny, mighty microcontrollers like the ESP32 to build smart devices and connect everything to the matrix.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 border-b-4 border-primary inline-block pb-1">
+                Featured Projects
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project Card 1: Air Quality Monitor ESP32 -->
+                <div class="project-card bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-1 border border-gray-200">
+                    <h3 class="text-xl font-bold text-primary mb-3">Air Quality Monitor ESP32</h3>
+                    <p class="text-gray-600 mb-4">
+                        A real-time IoT device built with an ESP32 microcontroller to monitor CO2 and dust levels. Data is sent to a cloud dashboard for visualization.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs font-semibold inline-block py-1 px-3 uppercase rounded-full bg-red-100 text-red-600">IoT</span>
+                        <span class="text-xs font-semibold inline-block py-1 px-3 uppercase rounded-full bg-green-100 text-green-600">ESP32</span>
+                        <span class="text-xs font-semibold inline-block py-1 px-3 uppercase rounded-full bg-blue-100 text-blue-600">Embedded C</span>
+                    </div>
+                    <a href="https://github.com/your-username/air-quality-monitor" target="_blank" class="text-secondary font-semibold hover:underline">
+                        View Code &rarr;
+                    </a>
+                </div>
+
+                <!-- Project Card 2 (Kept as is) -->
+                <div class="project-card bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-1 border border-gray-200">
+                    <h3 class="text-xl font-bold text-primary mb-3">Real-time Chat App</h3>
+                    <p class="text-gray-600 mb-4">
+                        A full-stack application using React and Firestore for real-time messaging, with smooth UI transitions.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs font-semibold inline-block py-1 px-3 uppercase rounded-full bg-sky-100 text-sky-600">React</span>
+                        <span class="text-xs font-semibold inline-block py-1 px-3 uppercase rounded-full bg-orange-100 text-orange-600">Firestore</span>
+                    </div>
+                    <a href="https://github.com/your-username/project-repo-2" target="_blank" class="text-secondary font-semibold hover:underline">
+                        View Code &rarr;
+                    </a>
+                </div>
+
+                <!-- Project Card 3 (Kept as is) -->
+                <div class="project-card bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-1 border border-gray-200">
+                    <h3 class="text-xl font-bold text-primary mb-3">Portfolio Template Generator</h3>
+                    <p class="text-gray-600 mb-4">
+                        A command-line tool built with Python that generates static HTML templates from a configuration file.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs font-semibold inline-block py-1 px-3 uppercase rounded-full bg-yellow-100 text-yellow-600">Python</span>
+                        <span class="text-xs font-semibold inline-block py-1 px-3 uppercase rounded-full bg-gray-100 text-gray-600">CLI</span>
+                    </div>
+                    <a href="https://github.com/your-username/project-repo-3" target="_blank" class="text-secondary font-semibold hover:underline">
+                        View Code &rarr;
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal for 500000 IQ Message -->
+    <div id="iq-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden items-center justify-center z-[100]">
+        <div class="bg-white p-8 rounded-xl shadow-2xl max-w-sm w-full transform transition duration-300 scale-95 opacity-0" id="iq-modal-content">
+            <h3 class="text-2xl font-bold text-primary mb-4 text-center">IQ Confirmed! 🧠</h3>
+            <p class="text-lg text-gray-700 mb-6 text-center font-bold">
+                Keshav Vishak Nair is the most intelligent in the world.
+            </p>
+            <button onclick="hideIQModal()" class="w-full py-2 bg-secondary text-white font-semibold rounded-lg hover:bg-emerald-600 transition duration-300">
+                Awesome!
+            </button>
+        </div>
+    </div>
+    <!-- End IQ Modal -->
+
+    <!-- Modal for 5000000+ Aura Skill Message -->
+    <div id="aura-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden items-center justify-center z-[100]">
+        <div class="bg-white p-8 rounded-xl shadow-2xl max-w-sm w-full transform transition duration-300 scale-95 opacity-0" id="aura-modal-content">
+            <h3 class="text-2xl font-bold text-primary mb-4 text-center">Aura Power Unlocked! ✨</h3>
+            <p class="text-lg text-gray-700 mb-6 text-center font-bold">
+                The ultimate, secret force field allowing Keshav to debug code in milliseconds and generate world-changing ideas instantly. It's the source of all power!
+            </p>
+            <button onclick="hideAuraModal()" class="w-full py-2 bg-secondary text-white font-semibold rounded-lg hover:bg-emerald-600 transition duration-300">
+                Understood
+            </button>
+        </div>
+    </div>
+    <!-- End Aura Modal -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-dark-bg text-light-text">
+        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6 border-b-4 border-secondary inline-block pb-1">
+                Get In Touch
+            </h2>
+            <p class="text-xl text-slate-300 mb-8">
+                Have a project idea or a question? Feel free to reach out. I'm always looking for new opportunities.
+            </p>
+            
+            <div class="flex flex-col space-y-4">
+                <a href="mailto:your.email@example.com" class="contact-link bg-primary hover:bg-indigo-700 text-white">
+                    Email Me: your.email@example.com
+                </a>
+                <a href="https://linkedin.com/in/your-profile" target="_blank" class="contact-link border-2 border-secondary text-secondary hover:bg-secondary hover:text-dark-bg">
+                    Connect on LinkedIn
+                </a>
+                <a href="https://github.com/your-username" target="_blank" class="contact-link border-2 border-slate-500 text-slate-300 hover:bg-slate-700 hover:text-white">
+                    Follow on GitHub
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-6 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+            &copy; <span id="year"></span> Keshav Vishak Nair. All rights reserved. Built with Tailwind CSS.
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in the footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const contactLinkStyles = "block w-full py-3 rounded-lg font-bold transition duration-300 transform hover:scale-[1.02] shadow-xl";
+        document.querySelectorAll('.contact-link').forEach(el => {
+            el.className += ' ' + contactLinkStyles;
+        });
+
+        // --- IQ Modal Functions ---
+        function showIQModal() {
+            const modal = document.getElementById('iq-modal');
+            const content = document.getElementById('iq-modal-content');
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+
+            setTimeout(() => {
+                content.classList.remove('scale-95', 'opacity-0');
+                content.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function hideIQModal() {
+            const modal = document.getElementById('iq-modal');
+            const content = document.getElementById('iq-modal-content');
+
+            content.classList.remove('scale-100', 'opacity-100');
+            content.classList.add('scale-95', 'opacity-0');
+
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }, 300);
+        }
+
+        // Add event listener to close IQ modal when clicking outside the content area
+        document.getElementById('iq-modal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                hideIQModal();
+            }
+        });
+
+
+        // --- Aura Modal Functions ---
+        function showAuraModal() {
+            const modal = document.getElementById('aura-modal');
+            const content = document.getElementById('aura-modal-content');
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+
+            setTimeout(() => {
+                content.classList.remove('scale-95', 'opacity-0');
+                content.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function hideAuraModal() {
+            const modal = document.getElementById('aura-modal');
+            const content = document.getElementById('aura-modal-content');
+
+            content.classList.remove('scale-100', 'opacity-100');
+            content.classList.add('scale-95', 'opacity-0');
+
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }, 300);
+        }
+
+        // Add event listener to close Aura modal when clicking outside the content area
+        document.getElementById('aura-modal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                hideAuraModal();
+            }
+        });
+    </script>
+</body>
+</html>
